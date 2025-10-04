@@ -8,7 +8,6 @@ interface IconProps {
 
 export const Icon = ({
   name,
-  color = "currentColor",
   className = "",
 }: IconProps) => {
   const icons = {
