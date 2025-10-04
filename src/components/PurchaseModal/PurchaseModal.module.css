@@ -7,7 +7,7 @@
     height: 100vh;
     z-index: 900;
     padding: 31.5px;
-    background-color: var(--tg-theme-bg-color);
+    background-color: var(--bg-color);
     display: flex;
     justify-content: center;
     align-items: center;

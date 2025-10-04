@@ -1,23 +1,12 @@
 'use client';
 
+import { useTelegram } from '@/hooks/useTelegram';
 import { useTheme } from '@/hooks/useTheme';
-import { useEffect, useState } from 'react';
 
 export const RootLayout = ({ children }: { children: React.ReactNode }) => {
-  const { cssVariables, isInTelegram } = useTheme();
-  const [isMounted, setIsMounted] = useState(false);
+  const { cssVariables } = useTheme();
+  const { isInTelegram } = useTelegram()
 
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  if (!isMounted) {
-    return (
-      <div className={isInTelegram ? 'telegram-app' : 'web-app'}>
-          {children}
-      </div>
-    );
-  }
 
   return (
     <div 

@@ -3,7 +3,7 @@
     padding: 22.5px 46.5px;
     position: sticky;
     bottom: -5;
-    background-color: var(--tg-theme-secondary-bg-color);
+    background-color: var(--gray-secondary-color);
     left: 0;
     right: 0;
     display: flex;
@@ -16,4 +16,15 @@
 
 .iconActive{
     opacity: 1;
+}
+
+@media(hover: hover){
+
+    .icon:hover{
+        opacity: .7;
+    }
+
+    .iconActive:hover{
+        opacity: .5;
+    }
 }

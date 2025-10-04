@@ -48,7 +48,7 @@
     color: var(--gray-light);
 
     span{
-        color: var(--tg-theme-text-color)
+        color: var(--text-color)
     }
 }
 

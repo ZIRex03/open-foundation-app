@@ -1,16 +1,11 @@
 
 :root {
-  --tg-theme-bg-color: #ffffff;
-  --tg-theme-text-color: #fff;
-  --tg-theme-hint-color: #999999;
-  --tg-theme-link-color: #2481cc;
-  --tg-theme-button-color: #2481cc;
-  --tg-theme-button-text-color: #ffffff;
-  --tg-theme-secondary-bg-color: #15202B;
-
   --gray-light: #AAB8C2;
   --gray-secondary-color: #253341;
   --dark: #15202B;
+  --bg-color: #2f2f33;
+  --text-color: #fff;
+  --blue-primary-color: #1D9BF0;
 }
 
 * {
@@ -21,8 +16,7 @@
 }
 
 body {
-  background-color: var(--tg-theme-bg-color);
-  color: var(--tg-theme-text-color);
+  color: var(--text-color);
   margin: 0;
   padding: 0;
   font-family: var(--font-anonymous-pro), monospace;
@@ -31,15 +25,18 @@ body {
 .web-app {
   max-width: 428px;
   margin: 0 auto;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  background-color: var(--tg-theme-bg-color);
+  background-color: var(--bg-color);
   position: relative;
 }
 
 .telegram-app {
   position: relative;
+  margin: 0 auto;
+  max-width: 428px;
+  background-color: var(--bg-color);
 }
 
 .container{
   padding: 20px 30px;
+  min-height: 100vh;
 }

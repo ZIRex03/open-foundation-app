@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 
 import userReducer from './slices/userSlice'
+import dropPointsReducer from './slices/dropPointsSlice'
 
 export const store = configureStore({
     reducer: {
         user: userReducer,
+        points: dropPointsReducer
     }
 })
 

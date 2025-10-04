@@ -8,7 +8,11 @@ import Image from "next/image";
 import POINT_ICON from "../../../public/icons/point_icon.png";
 import PurchaseModal from "../PurchaseModal/PurchaseModal";
 
-export const DropPoints = () => {
+interface DropPointsProps {
+  pointsPrice: number
+}
+
+export const DropPoints = ({pointsPrice}: DropPointsProps) => {
 
   const [isOpenModal, setIsOpenModal] = useState(false)
 
@@ -26,7 +30,7 @@ export const DropPoints = () => {
 
           <div className={styles.pointsInfo}>
             <p className={styles.title}>Drop Points price:</p>
-            <span className={styles.price}>0.01 TON</span>
+            <span className={styles.price}>{pointsPrice} TON</span>
           </div>
         </div>
 

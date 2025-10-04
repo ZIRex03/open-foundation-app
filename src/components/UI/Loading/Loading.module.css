@@ -21,8 +21,8 @@
 .spinner {
   width: 40px;
   height: 40px;
-  border: 4px solid var(--tg-theme-secondary-bg-color);
-  border-top: 4px solid var(--tg-theme-button-color);
+  border: 4px solid var(--bg-color);
+  border-top: 4px solid var(--blue-primary-color);
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }

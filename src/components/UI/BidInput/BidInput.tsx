@@ -14,14 +14,14 @@ const BidInput = ({ value, onChange }: BidInputProps) => {
   };
 
   const handleDecrement = () => {
-    if (value > 100) {
+    if (value > 0) {
       onChange(value - 1);
     }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newValue = parseInt(e.target.value) || 100;
-    onChange(Math.max(100, newValue));
+    const newValue = parseInt(e.target.value) || 0;
+    onChange(Math.max(0, newValue));
   };
 
   return (
@@ -31,7 +31,7 @@ const BidInput = ({ value, onChange }: BidInputProps) => {
         <button
           className={styles.button}
           onClick={handleDecrement}
-          disabled={value <= 100}
+          disabled={value <= 0}
         >
           <Icon name="minus" className={styles.icon} />
         </button>
@@ -39,10 +39,10 @@ const BidInput = ({ value, onChange }: BidInputProps) => {
         <input
           type="number"
           className={styles.inputBid}
-          defaultValue="100"
+          defaultValue="0"
           value={value}
           onChange={handleInputChange}
-          min="100"
+          min="0"
         />
 
         <button className={styles.button} onClick={handleIncrement}>

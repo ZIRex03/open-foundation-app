@@ -1,11 +1,8 @@
 'use client';
 
-import { useTelegram } from './useTelegram';
-
 export const useTheme = () => {
-  const { isInTelegram, themeParams } = useTelegram();
-
-  const defaultTheme = {
+  
+  const customTheme = {
     bg_color: '#2f2f33',
     text_color: '#fff', 
     hint_color: '#999999',
@@ -15,19 +12,16 @@ export const useTheme = () => {
     secondary_bg_color: '#15202B',
   };
 
-  const currentTheme = isInTelegram ? { ...defaultTheme, ...themeParams } : defaultTheme;
-
   return {
-    isInTelegram,
-    theme: currentTheme,
+    theme: customTheme,
     cssVariables: {
-      '--tg-theme-bg-color': currentTheme.bg_color!,
-      '--tg-theme-text-color': currentTheme.text_color!,
-      '--tg-theme-hint-color': currentTheme.hint_color!,
-      '--tg-theme-link-color': currentTheme.link_color!,
-      '--tg-theme-button-color': currentTheme.button_color!,
-      '--tg-theme-button-text-color': currentTheme.button_text_color!,
-      '--tg-theme-secondary-bg-color': currentTheme.secondary_bg_color!,
+      '--bg-color': customTheme.bg_color,
+      '--text-color': customTheme.text_color,
+      '--hint-color': customTheme.hint_color,
+      '--link-color': customTheme.link_color,
+      '--button-color': customTheme.button_color,
+      '--button-text-color': customTheme.button_text_color,
+      '--secondary-bg-color': customTheme.secondary_bg_color,
     }
   };
 };

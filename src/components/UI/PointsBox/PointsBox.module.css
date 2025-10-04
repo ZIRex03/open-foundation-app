@@ -10,7 +10,7 @@
 }
 
 .label{
-    background-color: var(--tg-theme-bg-color);
+    background-color: var(--bg-color);
     font-size: 10px;
     padding: 2px 11px;
     position: absolute;
