@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Anonymous_Pro, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import './reset.css'
+import Providers from "./Providers";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -11,6 +14,12 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const anonymousPro = Anonymous_Pro({
+  variable: "--font-anonymous-pro",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,8 +33,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+      <head>
+        <Script
+          src="https://telegram.org/js/telegram-web-app.js?59"
+        />
+          
+      </head>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${anonymousPro.variable}`}>
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );

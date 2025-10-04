@@ -1,0 +1,35 @@
+
+.form{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    width: 100%;
+}
+
+.desc{
+    font-size: 12px;
+}
+
+.inputBox{
+    display: flex;
+    column-gap: 12px;
+}
+
+.selectBox{
+    background-color: var(--dark);
+    padding: 18px 14px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: var(--gray-light);
+    outline: none;
+}
+
+.valueBox{
+    background: var(--dark);
+    border-radius: 10px;
+    padding: 24px 18.5px;
+    width: 100%;
+    font-size: 16px;
+    color: var(--gray-light);
+}

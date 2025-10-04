@@ -1,0 +1,23 @@
+
+.fundsBarBox{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.titleBox{
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.raise{
+    font-size: 12px;
+    opacity: .74;
+    margin-top: 5px;
+}
+
+.goal{
+    font-size: 10px;
+    opacity: .74;
+}

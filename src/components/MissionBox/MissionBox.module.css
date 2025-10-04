@@ -1,0 +1,34 @@
+
+.missionBox{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.mission{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--gray-light);
+    line-height: 1.2;
+    transition: all 0.3s ease;
+}
+
+.mission.collapsed{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.mission.expanded{
+    display: block;
+}
+
+.readMore{
+    border-radius: 14px;
+    padding: 11px;
+    font-weight: 700;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.1);
+}

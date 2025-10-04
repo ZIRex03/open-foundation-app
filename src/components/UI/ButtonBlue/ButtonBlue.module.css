@@ -1,0 +1,18 @@
+
+.buttonBlue{
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12px 0;
+    background-color: var(--tg-theme-button-color);
+    width: 100%;
+    margin-top: 15px;
+    transition: .3s all ease;
+}
+
+@media(hover: hover){
+
+    .buttonBlue:hover{
+        opacity: .4;
+    }
+}

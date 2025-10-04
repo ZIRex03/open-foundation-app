@@ -1,0 +1,21 @@
+
+.pointsBox{
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 8px 23px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+}
+
+.label{
+    background-color: var(--tg-theme-bg-color);
+    font-size: 10px;
+    padding: 2px 11px;
+    position: absolute;
+    left: 50%;
+    bottom: -5;
+    transform: translate(-50%, 50%);
+    pointer-events: none;
+}

@@ -1,0 +1,19 @@
+
+.bottomNav{
+    padding: 22.5px 46.5px;
+    position: sticky;
+    bottom: -5;
+    background-color: var(--tg-theme-secondary-bg-color);
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon{
+    opacity: .5;
+}
+
+.iconActive{
+    opacity: 1;
+}
