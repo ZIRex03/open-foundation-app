@@ -13,8 +13,8 @@
     "@telegram-apps/sdk-react": "^3.3.7",
     "@telegram-apps/telegram-ui": "^2.1.9",
     "next": "15.5.4",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^5.5.0",
     "react-redux": "^9.2.0"
   },
