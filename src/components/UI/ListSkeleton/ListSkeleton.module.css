@@ -1,0 +1,63 @@
+.listSkeleton {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.skeletonItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.skeletonAvatar {
+  flex-shrink: 0;
+}
+
+.skeletonContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skeletonBadge {
+  flex-shrink: 0;
+}
+
+.skeletonElement {
+  background: linear-gradient(
+    90deg,
+    var(--bg-color) 0%,
+    #3a3a3f 25%,
+    #45454a 50%,
+    #3a3a3f 75%,   
+    var(--bg-color) 100%
+  );
+  background-size: 200% 100%;
+  animation: loading 2s ease-in-out infinite;
+  
+}
+
+.skeletonLine {
+  background: linear-gradient(
+    90deg,
+    var(--bg-color) 0%,
+    #3a3a3f 25%,
+    #45454a 50%,
+    #3a3a3f 75%,   
+    var(--bg-color) 100%
+  );
+  background-size: 200% 100%;
+  animation: loading 2s ease-in-out infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

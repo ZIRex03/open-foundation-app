@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { TabsSection } from '../TabsSection/TabsSection'
 import { UsersLeaderboard } from '../UsersLeaderboard/UsersLeaderboard'
 import LatestTransfers from '../LatestTransfers/LatestTransfers'
+import TopUsers from '../TopUsers/TopUsers'
 
 export const UserBoard = () => {
 
@@ -17,6 +18,7 @@ export const UserBoard = () => {
 
         {activeTab === "leaderboard" && <UsersLeaderboard/>}
         {activeTab === "transfers" && <LatestTransfers/>}
+        {activeTab === "topusers" && <TopUsers/>}
         
     </div>
   )

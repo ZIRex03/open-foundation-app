@@ -22,7 +22,7 @@ export const FundsBar = ({fundsRaised, goalFunds}: FundsBarProps) => {
         max={goalFunds}
       />
 
-      <p className={styles.goal}>First round goal {goalFunds} TON</p>
+      <p className={styles.goal}>First round goal {goalFunds.toLocaleString("en-US", {maximumFractionDigits: 2, minimumFractionDigits: 2})} TON</p>
         
     </div>
   )

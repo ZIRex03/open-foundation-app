@@ -1,0 +1,35 @@
+
+.fundsSkeleton{
+    height: 290px;
+    margin-top: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 14px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.skeletonElement {
+  background: linear-gradient(
+    90deg,
+    var(--bg-color) 0%,
+    #3a3a3f 25%,
+    #45454a 50%,
+    #3a3a3f 75%,   
+    var(--bg-color) 100%
+  );
+  background-size: 200% 100%;
+  border-radius: 12px;
+  animation: loading 2s ease-in-out infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

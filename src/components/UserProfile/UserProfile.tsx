@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-
 import styles from "./UserProfile.module.css";
 import Image, { StaticImageData } from "next/image";
 import { PointsBox } from "../UI/PointsBox/PointsBox";
@@ -49,6 +48,13 @@ export const UserProfile = ({
           <Image
             src={finalData.avatar}
             alt={finalData.username}
+            width={45}
+            height={45}
+            style={{
+              objectFit: 'cover',
+              width: "100%",
+              height: "100%"
+            }}
           />
         </div>
 
@@ -59,6 +65,7 @@ export const UserProfile = ({
       </div>
 
       <PointsBox points={points} />
+
     </div>
   );
 };

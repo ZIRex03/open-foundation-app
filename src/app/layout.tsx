@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Anonymous_Pro, Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import './reset.css'
+import "../styles/globals.css";
+import '../styles/reset.css'
 import Providers from "./Providers";
 import Script from "next/script";
 

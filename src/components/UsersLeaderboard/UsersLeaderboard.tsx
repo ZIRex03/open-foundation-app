@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect } from 'react'
+import React, { useEffect, useMemo } from 'react'
 
 import styles from './UsersLeaderboard.module.css'
 
@@ -8,20 +8,23 @@ import ICON from '../../../public/icons/test_icon.png'
 import Image from 'next/image'
 import { useAppDispatch, useAppSelector } from '@/hooks/redux'
 import { fetchLeaderboardUsers } from '@/store/slices/userSlice'
-import { Loading } from '../UI/Loading/Loading'
+import { ListSkeleton } from '../UI/ListSkeleton/ListSkeleton'
 
 export const UsersLeaderboard = () => {
 
     const dispatch = useAppDispatch()
-    const {leaderboardUsers, loading} = useAppSelector(state => state.user)
+    const {leaderboardUsers, leaderBoardLoading, isLeaderBoardFetched} = useAppSelector(state => state.user)
 
     useEffect(() => {
-        dispatch(fetchLeaderboardUsers())
-    }, [dispatch])
+        if(!isLeaderBoardFetched) dispatch(fetchLeaderboardUsers())
+    }, [dispatch, isLeaderBoardFetched])
 
-    if(loading) return <Loading/>
+    const filteredLeaderboardUsers = useMemo(() => {
+        return [...leaderboardUsers].sort((a, b) => b.amount - a.amount)
+    }, [leaderboardUsers])
 
-    const filteredLeaderboardUsers = [...leaderboardUsers].sort((a,b) => b.amount - a.amount)
+    if(leaderBoardLoading) return <ListSkeleton/>
+
 
   return (
     <div className={styles.usersList}>
@@ -36,8 +39,6 @@ export const UsersLeaderboard = () => {
                     <Image
                         src={ICON}
                         alt={user.username}
-                        width={60}
-                        height={60}
                     />
                 </div>
 

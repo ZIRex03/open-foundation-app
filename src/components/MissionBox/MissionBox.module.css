@@ -18,6 +18,7 @@
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+    line-clamp: 3;
     overflow: hidden;
 }
 
@@ -27,8 +28,9 @@
 
 .readMore{
     border-radius: 14px;
-    padding: 11px;
+    padding: 12px 18px 10px;
     font-weight: 700;
+    line-height: 1.2;
     font-size: 14px;
     background: rgba(255, 255, 255, 0.1);
 }

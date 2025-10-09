@@ -2,11 +2,12 @@
 .pointsBox{
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
-    padding: 8px 23px;
+    padding: 8px 22px;
     font-size: 14px;
     font-weight: 700;
     text-align: center;
     position: relative;
+    line-height: 1.2;
 }
 
 .label{

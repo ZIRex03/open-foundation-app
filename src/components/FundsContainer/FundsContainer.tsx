@@ -8,7 +8,7 @@ import { DropPoints } from '../DropPoints/DropPoints'
 import { ButtonBlue } from '../UI/ButtonBlue/ButtonBlue'
 import { useAppDispatch, useAppSelector } from '@/hooks/redux'
 import { fetchDropPoints } from '@/store/slices/dropPointsSlice'
-import { Loading } from '../UI/Loading/Loading'
+import FundsSkeleton from '../UI/FundsSkeleton/FundsSkeleton'
 
 export const FundsContainer = () => {
 
@@ -19,7 +19,8 @@ export const FundsContainer = () => {
     dispatch(fetchDropPoints())
   }, [dispatch])
 
-  if(loading) return <Loading/>
+  if(loading) return <FundsSkeleton/>
+
 
   if(!dropPoints) return null
 

@@ -1,6 +1,5 @@
-import React from 'react'
-
 import styles from './TabsSection.module.css'
+import { useHorizontalScroll } from '@/hooks/useHorizontalScroll';
 
 interface TabsSectionProps{
     activeTab: string;
@@ -23,11 +22,18 @@ const tabs = [
         title: "topusers",
         text: "TOP users"
     },
+  
 ]
 
 export const TabsSection = ({activeTab, setActiveTab}: TabsSectionProps) => {
+
+   const {ref, onWheel} = useHorizontalScroll()
   return (
-    <div className={styles.tabsSection}>
+    <div
+        className={styles.tabsSection}
+        ref={ref}
+        onWheel={onWheel}
+    >
 
         {tabs.map((tab) => (
             <button
