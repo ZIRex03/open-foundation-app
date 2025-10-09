@@ -1,7 +1,7 @@
 
 .buttonBlue{
     border-radius: 14px;
-    font-size: 14px;
+    font-size: clamp(14px, 0.94vw, 18px);
     font-weight: 700;
     padding: 12px 0;
     line-height: 1.2;

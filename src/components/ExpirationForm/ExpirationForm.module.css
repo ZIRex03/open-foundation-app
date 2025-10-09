@@ -8,7 +8,7 @@
 }
 
 .desc{
-    font-size: 12px;
+    font-size: clamp(12px, 0.94vw, 18px);
 }
 
 .inputBox{
@@ -20,7 +20,7 @@
     background-color: var(--dark);
     padding: 18px 14px;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: clamp(16px, 1.04vw, 20px);
     color: var(--gray-light);
     outline: none;
 }
@@ -28,8 +28,8 @@
 .valueBox{
     background: var(--dark);
     border-radius: 10px;
-    padding: 24px 18.5px;
+    padding: 24px 18px;
     width: 100%;
-    font-size: 16px;
+    font-size: clamp(16px, 1.04vw, 20px);
     color: var(--gray-light);
 }

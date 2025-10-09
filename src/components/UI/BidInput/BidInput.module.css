@@ -25,7 +25,7 @@
 }
 
 .inputBid{
-    font-size: 24px;
+    font-size: clamp(24px, 1.56vw, 30px);
     font-weight: 700;
     width: 125px;
     min-width: 40px;
@@ -44,7 +44,7 @@
 }
 
 .desc{
-    font-size: 12px;
+    font-size: clamp(12px, 0.94vw, 18px);
     color: var(--gray-light);
 
     span{

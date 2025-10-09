@@ -12,12 +12,12 @@
 }
 
 .raise{
-    font-size: 12px;
+    font-size: clamp(12px, 0.83vw, 16px);
     opacity: .74;
     margin-top: 5px;
 }
 
 .goal{
-    font-size: 10px;
+    font-size: clamp(10px, 0.83vw, 16px);
     opacity: .74;
 }

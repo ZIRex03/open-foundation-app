@@ -25,11 +25,11 @@
 }
 
 .username{
-    font-size: 16px;
+    font-size: clamp(16px, 1.04vw, 20px);
     font-weight: 400;
 }
 
 .rank{
-    font-size: 10px;
+    font-size: clamp(10px, 0.83vw, 16px);
     color: var(--gray-light);
 }

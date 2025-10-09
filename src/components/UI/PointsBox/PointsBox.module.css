@@ -3,7 +3,7 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     padding: 8px 22px;
-    font-size: 14px;
+    font-size: clamp(14px, 0.94vw, 18px);
     font-weight: 700;
     text-align: center;
     position: relative;
@@ -12,7 +12,7 @@
 
 .label{
     background-color: var(--bg-color);
-    font-size: 10px;
+    font-size: clamp(10px, 0.73vw, 14px);
     padding: 2px 11px;
     position: absolute;
     left: 50%;
