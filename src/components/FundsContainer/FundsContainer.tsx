@@ -30,7 +30,11 @@ export const FundsContainer = () => {
           fundsRaised={dropPoints.fundsRaised}
           goalFunds={dropPoints.goalFunds}
         />
-        <DropPoints pointsPrice={dropPoints.pointsPrice}/>
+        <DropPoints
+          pointsPrice={dropPoints.pointsPrice}
+          memberCount={148320}
+          purchased={223.42}
+        />
         <ButtonBlue
           text='Get drop points!'
         />

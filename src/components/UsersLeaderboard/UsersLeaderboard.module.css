@@ -2,7 +2,7 @@
 .usersList{
     display: flex;
     flex-direction: column;
-    row-gap: 15px;
+    row-gap: 16px;
 }
 
 .userBox{
@@ -36,7 +36,7 @@
 .userInfo{
     display: flex;
     flex-direction: column;
-    row-gap: 5px;
+    row-gap: 6px;
 }
 
 .userName{

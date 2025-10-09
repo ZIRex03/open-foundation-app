@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React, { useState } from "react";
 
@@ -9,19 +9,30 @@ import POINT_ICON from "../../../public/icons/point_icon.png";
 import PurchaseModal from "../PurchaseModal/PurchaseModal";
 
 interface DropPointsProps {
-  pointsPrice: number
+  pointsPrice: number;
+  memberCount: number;
+  purchased: number;
 }
 
-export const DropPoints = ({pointsPrice}: DropPointsProps) => {
-
-  const [isOpenModal, setIsOpenModal] = useState(false)
+export const DropPoints = ({
+  pointsPrice,
+  memberCount,
+  purchased,
+}: DropPointsProps) => {
+  const [isOpenModal, setIsOpenModal] = useState(false);
 
   const handleClickCloseModal = () => {
-    setIsOpenModal(false)
-  }
+    setIsOpenModal(false);
+  };
+
+  const formatedMembers = new Intl.NumberFormat("en-US", {
+    notation: "compact",
+    maximumFractionDigits: 2,
+    minimumFractionDigits: 2,
+  }).format(memberCount);
+
   return (
     <div className={styles.droppointsBox}>
-
       <div className={styles.pointsBox}>
         <div className={styles.droppointsPrice}>
           <div className={styles.pointsImage}>
@@ -44,11 +55,12 @@ export const DropPoints = ({pointsPrice}: DropPointsProps) => {
 
       <div className={styles.membersBox}>
         <span>🔥</span>
-        <p className={styles.members}>148.32K members & 223.42 purchased</p>
+        <p className={styles.members}>
+          {formatedMembers} members & {purchased} purchased
+        </p>
       </div>
 
-      <PurchaseModal isOpen={isOpenModal} closeModal={handleClickCloseModal}/>
-
+      <PurchaseModal isOpen={isOpenModal} closeModal={handleClickCloseModal} />
     </div>
   );
 };
