@@ -7,7 +7,7 @@ const LatestTransfers = () => {
     <div>
       <EmptyState 
         icon={GoNoEntry}
-        title='Данные о последних транзакциях отсутствуют'
+        title='There is no data about recent transfers'
       />
     </div>
   )

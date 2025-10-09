@@ -6,7 +6,7 @@ const TopUsers = () => {
   return (
     <div>
         <EmptyState
-          title='Список лидеров пока пуст'
+          title='The leaderboard is still empty'
           icon={MdOutlineLeaderboard}
         />
     </div>
